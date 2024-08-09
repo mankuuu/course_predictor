@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <form method="POST" , action="/predict" class="contact-us">
+        <!-- <h1>Please enter the text!</h1> -->
+        <!-- <div><label><input type="text" name="text" placeholder="Enter the text here." required></label></div> -->
+        <!-- <label for="usn">Enter your USN : </label> -->
+        <input type="text" id="usn" name="usn" placeholder="Enter your USN" required>
+        <!-- <textarea id="story" name="text" rows="5" cols="33">Enter here: -->
+<!-- </textarea> -->
+        <div><button type="submit" data-toggle="modal" data-target="#exampleModal">Submit</button></div>
+        
+    </form>
+    <div class="warning">
+        <p><h1>ALERT!</h1> WE HAVE CREATED THIS WEB APP ON THE ASSUMPTION OF THE APPROACH WE FOLLOWED WILL BE SAME AS FOLLOWED BY THE COLLEGE. IF COLLEGE OPTS FOR ANOTHER APPROACH THEN RESULT MAY DIFFER.</p>
+        <p>THANKS!</p>
+    </div>
+    <!-- <form action="/" style="all : unset"> -->
+        <!-- <div> -->
+        <!-- <button type="submit" class="btn btn-primary">Go Back</button> -->
+        <!-- </div> -->
+    <!-- </form> -->
+     <div class = "wavebody">
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave wave-1" id="wave1"></div>
+          <div class="wave wave-2" id="wave2"></div>
+          <div class="wave wave-3" id="wave3"></div>
+          <div class="wave wave-4" id="wave4"></div>
+        </div>
+        <p>A collaborative work by : </p>
+        <p class="credits">Mayank Raj : Premsukh</p>
+        <!-- <p>&copy;2021 Nadine Coelho | All Rights Reserved</p> -->
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </div>
+</body>
+
+</html>

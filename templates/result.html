@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your assigned Course!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box contact-us">
+            {% if student == -1 %}
+            <h2>Incorrect method of submissions or USN!</h2>
+            {% else %} 
+            <p>You are assigned</p>
+            <h1 class="answer">{{student}} <br> {{sub_name}}</h1>
+            {%endif %}
+            
+        </div>
+       
+
+        <div class="box">
+            <table >
+                <thead>
+                    <tr>
+                        <th><h1>Priority</h1></th>
+                        <th><h1>Subject Code</h1></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%if priority_list != -1%}
+                    {% for key, value in priority_list.items() %}
+                    <tr>
+                        <td class="key"><span class="key">{{key }}</span> </td>
+                        <td > <span class = "bold">{{ value[:7] }}</span> <span class = "sub-name">{{ value[8:]}}</span> </td>
+                    </tr>
+                   {% endfor %}
+                   {%endif%}
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+    <form action="/" style="all : unset" class = "back">
+        <!-- <div> -->
+        <button type="submit" class="btn btn-primary">Go Back</button>
+        <!-- </div> -->
+    </form>
+    <div class = "wavebody">
+        <footer class="footer">
+            <div class="waves">
+              <div class="wave" id="wave1"></div>
+              <div class="wave" id="wave2"></div>
+              <div class="wave" id="wave3"></div>
+              <div class="wave" id="wave4"></div>
+            </div>
+            <p>A collaborative work by : </p>
+            <p class="credits">Mayank Raj : Premsukh </p>
+            <!-- <p>&copy;2021 Nadine Coelho | All Rights Reserved</p> -->
+          </footer>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          </div>
+</body>
+
+</html>
